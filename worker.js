@@ -1,5 +1,5 @@
 /* 将链接改为你部署的pages链接 */
-const readme = `https://docker-readme.pages.dev/`;
+const readme = `https://xxxx.pages.dev/`;
 export default {
     async fetch(request) {
         const url = new URL(request.url);
