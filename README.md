@@ -36,15 +36,20 @@ docker pull docker.xxxxxx.xyz/library/alpine:latest
 ```
 
 ### 方式2：设置镜像源
+
+#### 设置镜像源
 ``` bash
-# 设置镜像源
 sudo tee /etc/docker/daemon.json <<EOF
 {
     "registry-mirrors": ["https://docker.xxxxxx.xyz"]
 }
 EOF
-# 重新加载
+````
+#### 重新加载配置
+``` bash
 sudo systemctl daemon-reload
-# 重启docker
+```
+#### 重启docker
+``` bash
 sudo systemctl restart docker
 ```
