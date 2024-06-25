@@ -9,8 +9,8 @@ git clone https://github.com/raging-snail/docker-proxy.git
 
 ### step2.部署pages
 + 登录Cloudflare，创建pages
-+ 上传资源，选择刚刚拉取的代码
-+ 设置自定义域（可以不设置）
++ 上传index.html
++ 如果有域名，可以设置自定义域，即访问链接。如果不设置，Cloudflare会自动给你分配一个访问链接
 
 ### step3.部署worker
 + 登录Cloudflare，创建worker
@@ -19,7 +19,7 @@ git clone https://github.com/raging-snail/docker-proxy.git
   ``` js
   const readme = `https://xxxx.pages.dev/`;
   ```
-+ 设置触发器，例如：docker.xxxxxx.xyz
++ 如果有域名，可以设置触发器，例如：docker.xxxxxx.xyz。如果不设置，Cloudflare会自动给你分配一个访问链接（国内访问非常慢）
 
 # 使用
 
