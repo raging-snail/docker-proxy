@@ -15,11 +15,11 @@ git clone https://github.com/raging-snail/docker-proxy.git
 ### step3.部署worker
 + 登录Cloudflare，创建worker
 + 将woker.js中的代码粘贴到woker中
-+ 修改为你刚刚部署的pages访问链接
++ 将第一行代码的链接修改为你刚刚部署的pages访问链接
   ``` js
-  const readme = `https://docker-readme.pages.dev/`;
+  const readme = `https://xxxx.pages.dev/`;
   ```
-+ 设置触发器
++ 设置触发器，例如：docker.xxxxxx.xyz
 
 # 使用
 
@@ -32,7 +32,7 @@ docker pull library/alpine:latest
 #### 加速拉取镜像命令
 ``` bash
 # 将前缀改为你自己部署的worker链接
-docker pull docker.821927.xyz/library/alpine:latest
+docker pull docker.xxxxxx.xyz/library/alpine:latest
 ```
 
 ### 方式2：设置镜像源
@@ -40,7 +40,7 @@ docker pull docker.821927.xyz/library/alpine:latest
 # 设置镜像源
 sudo tee /etc/docker/daemon.json <<EOF
 {
-    "registry-mirrors": ["https://docker.821927.xyz"]
+    "registry-mirrors": ["https://docker.xxxxxx.xyz"]
 }
 EOF
 # 重新加载
